@@ -27,7 +27,6 @@ public class ExchangeRatesDaoImpl implements ExchangeRatesDao {
 	public ExchangeRatesEntity getAllExchangeRatesFromDb() {
 		logger.info("getAllExchangeRatesFromDb called. fetching from repository.");
 		List<ExchangeRatesEntity> exchangeRatesEntityList = exchangeRatesRespository.findAll();	
-		System.out.println("exchangeRatesEntityList : " + exchangeRatesEntityList);
 		if(exchangeRatesEntityList.size() >= 1) {
 			return exchangeRatesEntityList.get(0);
 		}
