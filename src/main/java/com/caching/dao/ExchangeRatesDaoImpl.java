@@ -16,7 +16,7 @@ public class ExchangeRatesDaoImpl implements ExchangeRatesDao {
 	@Autowired
 	ExchangeRatesRespository exchangeRatesRespository;
 	
-	Logger logger = LoggerFactory.getLogger(ExchangeRatesDaoImpl.class);
+	private Logger logger = LoggerFactory.getLogger(ExchangeRatesDaoImpl.class);
 	
 	@Override
 	public void saveExchangeRatesToDb(ExchangeRatesEntity exchangeRatesEntity) {

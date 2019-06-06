@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("urls.currency")
 public class ExchangeUrlConfig {
 	
-	String exchangeApiUrl;
+	private String exchangeApiUrl;
 
 	public String getExchangeApiUrl() {
 		return exchangeApiUrl;

@@ -17,7 +17,7 @@ public class ExchangeControllerImpl {
 	@Autowired
 	ExchangeService exchangeService;
 	
-	Logger logger = LoggerFactory.getLogger(ExchangeControllerImpl.class);
+	private Logger logger = LoggerFactory.getLogger(ExchangeControllerImpl.class);
 	
 	@GetMapping
 	public ResponseEntity<String> ExchangeMsg() {
