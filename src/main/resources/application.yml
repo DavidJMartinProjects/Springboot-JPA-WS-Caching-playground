@@ -1,0 +1,16 @@
+spring:   
+   jpa:
+     show-sql: true
+     hibernate:
+       ddl-auto: create   
+       
+   datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/test_db
+      username: user
+      password: password
+      initialization-mode: always
+      
+urls:
+   currency:
+      exchangeApiUrl: https://api.exchangeratesapi.io/latest
