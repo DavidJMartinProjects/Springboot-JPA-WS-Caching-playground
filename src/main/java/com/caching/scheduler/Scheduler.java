@@ -3,6 +3,7 @@ package com.caching.scheduler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -28,6 +29,7 @@ public class Scheduler {
 	
 	private Logger logger = LoggerFactory.getLogger(Scheduler.class);
 	
+	@CacheEvict(cacheNames="exchangeRates")		
 	@Scheduled(initialDelay = 10000, fixedRate = 20000)
 	public void pollAndPersistExchangeRates() {
 		logger.info("Scheduled task pollAndPersistExchangeRates() called."); 
